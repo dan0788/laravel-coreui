@@ -1,5 +1,6 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
+## This project is a corrected compilation of the original bilaschandra repository. Link original bilaschandra repository: https://github.com/bilaschandra/laravel-coreui. For more information: https://coreui.io/bootstrap/docs/integration-guides/laravel/
 
 ## Laravel 11.x ready to start project
 
@@ -39,12 +40,12 @@ Follow the steps mentioned below to install and run the project.
     1. It will install all the laravel (PHP) packages by the command `composer install` (if you do not have `composer` then install it - https://getcomposer.org/download/)
     2. It will install all the NPM packages by the command `npm install` (if you do not have npm then install it - https://nodejs.org/en/download)
 3. Create `.env` file by copying the `.env.example`. You may use the command to do that `cp .env.example .env`
-4. Run the command `composer run-script post-create-project-cmd` to APP_KEY
+4. Run the command `composer run-script post-create-project-cmd` to APP_KEY ## (optional)
 5. Update the database name and credentials in `.env` file
-6. Run the command `php artisan migrate --seed`
+6. Run the command `php artisan migrate`
 7. Run the command `php artisan db:seed --class=UserSeeder` to create user, it will generate super admin `super@admin.com` and the password is `secret`
 8. Link storage directory: `php artisan storage:link`
-9. You may create a virtualhost entry to access the application or run `php artisan serve` from the project root and visit `http://127.0.0.1:8000`
+9. You may create a virtualhost entry to access the application or run `php artisan serve` an `npm run dev` from the project root and visit `http://127.0.0.1:8000`
 
 OR
 
