@@ -25,7 +25,8 @@ Route::get('/about', function () {
 /**
  * Auth Routes
  */
-Auth::routes(['verify' => false]);
+//Auth::routes(['verify' => true]);
+Auth::routes();
 
 
 Route::group(['namespace' => 'App\Http\Controllers'], function()
