@@ -1,6 +1,10 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 ## This project is a corrected compilation of the original bilaschandra repository. Link original bilaschandra repository: https://github.com/bilaschandra/laravel-coreui. For more information: https://coreui.io/bootstrap/docs/integration-guides/laravel/
+# The changes are:
+1. The "Access to undeclared static property Spatie\Permission\PermissionRegistrar::$pivotPermission" error occurs when migrations are run because the migration is trying to access a static property ($pivotPermission) that is not declared static in the PermissionRegistrar class. To address this issue, the migration was modified to access the $pivotPermission property of a PermissionRegistrar instance, rather than attempting to access it as a static property.
+2. The "Route [verification.verify] not defined" error indicates that Laravel is trying to redirect or generate a URL for a route with the name verification.verify and it is not defined in your routes files, because an SMTP service is needed to validation of emails at the time of registration. Therefore MustVerifyEmail was disabled in the app/Models/User.php path. Also in routes/web.php, Auth::routes(['verify' => true]); placing Auth::routes();. If you want to enable this service in the future, SMTP must be configured in the .env file.
+#
 
 ## Laravel 11.x ready to start project
 
